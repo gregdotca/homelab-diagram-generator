@@ -1,0 +1,283 @@
+# ============================================================================
+# Sample Homelab Diagram
+# ============================================================================
+# This file demonstrates every feature of the homelab diagram builder.
+# Run: homelab -input sample.yaml -output sample.svg
+
+title: "Sample Homelab Diagram"
+
+# --- VLANs ---
+# Define your network segments. Each gets a colored dot in the legend and a
+# matching color stripe on every device card assigned to that VLAN.
+# Colors are auto-assigned if omitted (blue, green, orange, purple, red, ...).
+vlans:
+  - { id: management, label: "VLAN 1 - Management - 192.168.1.0/24", color: "#2196F3" }
+  - { id: servers, label: "VLAN 10 - Servers - 10.0.10.0/24", color: "#4CAF50" }
+  - { id: iot, label: "VLAN 20 - IoT - 10.0.20.0/24", color: "#FF9800" }
+  - { id: trusted, label: "VLAN 30 - Trusted - 10.0.30.0/24", color: "#9C27B0" }
+
+# --- Badges ---
+# Small colored circles shown in the corner of device cards. The first letter
+# of the id is used as the badge letter (or set "letter" explicitly).
+# Colors are auto-assigned if omitted.
+badges:
+  - { id: ansible, label: "Managed by Ansible" }
+  - { id: docker, label: "Runs Docker" }
+  - { id: monitored, label: "Monitored" }
+  - { id: web, label: "Web-Facing", letter: "W" }
+
+# --- Sections ---
+# Sections are the large rounded boxes that group rows of devices together.
+# Their order here controls the top-to-bottom layout of the diagram.
+sections:
+  - { id: cloud, label: "Cloud Services" }
+  - { id: network, label: "Network Core" }
+  - { id: servers, label: "Infrastructure" }
+  - { id: virtualization, label: "Proxmox Server" }
+  - { id: clients, label: "Client Devices" }
+  - { id: iot, label: "IoT Devices" }
+
+# --- Devices ---
+# Standalone devices. Each one becomes its own card in the section it belongs
+# to. All fields except id, label, and section are optional.
+#
+# Available fields:
+#   id        - unique identifier (required)
+#   label     - display name (required)
+#   section   - which section to place this device in (required)
+#   icon      - icon to display (see list below, defaults to "generic")
+#   hardware  - hardware description line
+#   os        - operating system line
+#   specs     - additional specs line (renders last, good for connection type)
+#   ip        - IP address or hostname (shown at bottom of card)
+#   vlan      - VLAN id (adds a colored left stripe to the card)
+#   badges    - list of badge ids (shown as circles in bottom-right corner)
+#   services  - list of sub-items shown inside the card (strings or objects)
+#
+# Available icons:
+#   cloud, container, desktop, game-console, generic, iot, kindle, laptop,
+#   modem, nas, phone, printer, raspberry-pi, router, scale, server, switch,
+#   tablet, tv, vacuum, vm, watch, wifi-ap
+devices:
+  # --- Cloud Services ---
+  # Devices can use the multi-line format for readability
+  - id: vps-web
+    label: "Web Server"
+    section: cloud
+    icon: cloud
+    hardware: "VPS - 2 vCPU, 4GB RAM"
+    os: "Debian 12"
+    specs: "Nginx, Certbot"
+    ip: "web.example.com"
+    vlan: servers
+    badges: [ansible, web, monitored]
+    services: ["Ghost", "Static Sites", "API Gateway"]
+
+  - id: vps-mail
+    label: "Mail Server"
+    section: cloud
+    icon: cloud
+    hardware: "VPS - 1 vCPU, 2GB RAM"
+    os: "Debian 12"
+    ip: "mail.example.com"
+    vlan: servers
+    badges: [ansible, monitored]
+
+  - id: backup-cloud
+    label: "Cloud Backup"
+    section: cloud
+    icon: cloud
+    specs: "Encrypted offsite backup target"
+    vlan: servers
+    badges: [monitored]
+
+  # --- Network Core ---
+  - id: modem
+    label: "Cable Modem"
+    section: network
+    icon: modem
+    hardware: "Motorola MB8600"
+    ip: "192.168.100.1"
+
+  - id: router
+    label: "Router / Firewall"
+    section: network
+    icon: router
+    hardware: "pfSense on Protectli"
+    os: "pfSense CE 2.7"
+    ip: "192.168.1.1"
+    vlan: management
+
+  - id: switch
+    label: "Managed Switch"
+    section: network
+    icon: switch
+    hardware: "24-Port PoE+ Gigabit"
+    ip: "192.168.1.2"
+    vlan: management
+
+  - id: wifi-main
+    label: "WiFi Access Point"
+    section: network
+    icon: wifi-ap
+    hardware: "Main Floor"
+    ip: "192.168.1.3"
+    vlan: management
+
+  - id: wifi-upstairs
+    label: "WiFi Access Point"
+    section: network
+    icon: wifi-ap
+    hardware: "Upstairs"
+    ip: "192.168.1.4"
+    vlan: management
+
+  # --- Servers ---
+  - id: nas
+    label: "NAS"
+    section: servers
+    icon: nas
+    hardware: "Synology DS920+"
+    specs: "16TB usable (RAID), Ethernet"
+    ip: "10.0.10.5"
+    vlan: servers
+    badges: [monitored]
+
+  - id: pi-dns
+    label: "Pi-hole (Ad Blocking & DNS)"
+    section: servers
+    icon: raspberry-pi
+    hardware: "Raspberry Pi 4 (4GB)"
+    os: "Raspberry Pi OS"
+    specs: "Ethernet"
+    ip: "10.0.10.2"
+    vlan: servers
+    badges: [ansible, monitored]
+
+  - id: pi-vpn
+    label: "WireGuard VPN"
+    section: servers
+    icon: raspberry-pi
+    hardware: "Raspberry Pi 4 (2GB)"
+    os: "Raspberry Pi OS"
+    specs: "Ethernet"
+    ip: "10.0.10.3"
+    vlan: servers
+    badges: [ansible, monitored]
+
+  - id: hypervisor
+    label: "Proxmox Server"
+    section: servers
+    icon: server
+    hardware: "Dell PowerEdge T340"
+    specs: "Xeon E-2224, 64GB ECC, Ethernet"
+    ip: "10.0.10.10"
+    vlan: servers
+
+  # --- Client Devices ---
+  # Devices can also use the compact single-line format
+  - { id: desktop, label: "Desktop PC", section: clients, icon: desktop, hardware: "Custom Build", os: "Linux", specs: "Ethernet", ip: "10.0.30.10", vlan: trusted, badges: [ansible] }
+  - { id: personal-laptop, label: "Personal Laptop", section: clients, icon: laptop, specs: "WiFi", ip: "10.0.30.12", vlan: trusted }
+  - { id: tablet, label: "iPad", section: clients, icon: tablet, specs: "WiFi", ip: "10.0.30.20", vlan: trusted }
+  - { id: phone, label: "Phone", section: clients, icon: phone, specs: "WiFi", ip: "10.0.30.21", vlan: trusted }
+  - { id: tv-living, label: "Living Room TV", section: clients, icon: tv, hardware: "55\" 4K", specs: "Ethernet", ip: "10.0.30.30", vlan: trusted }
+  - { id: tv-bedroom, label: "Bedroom TV", section: clients, icon: tv, specs: "WiFi", ip: "10.0.30.31", vlan: trusted }
+  - { id: watch, label: "Smartwatch", section: clients, icon: watch, specs: "WiFi", ip: "10.0.30.40", vlan: trusted }
+  - { id: kindle, label: "Kindle", section: clients, icon: kindle, specs: "WiFi", ip: "10.0.30.41", vlan: trusted }
+  - { id: printer, label: "Laser Printer", section: clients, icon: printer, specs: "WiFi", ip: "10.0.30.50", vlan: trusted }
+  - { id: game-console, label: "Game Console", section: clients, icon: game-console, specs: "Ethernet", ip: "10.0.30.60", vlan: trusted }
+
+  # --- IoT ---
+  - { id: vacuum, label: "Robot Vacuum", section: iot, icon: vacuum, specs: "WiFi", ip: "10.0.20.10", vlan: iot }
+  - { id: smart-scale, label: "Smart Scale", section: iot, icon: scale, specs: "WiFi", ip: "10.0.20.11", vlan: iot }
+  - { id: smart-switches, label: "Smart Switches & Bulbs", section: iot, icon: iot, hardware: "~15 devices", specs: "WiFi", vlan: iot }
+
+# --- Groups ---
+# Groups let you visually cluster related devices inside a section. When a
+# section has more than one group (each with multiple devices), the groups
+# get their own labeled sub-boxes with borders.
+#
+# Groups support "defaults" - shared field values applied to every device in
+# the group. Devices can override any default by setting the field themselves.
+#
+# The "columns" field controls how many devices per row inside the group
+# (auto-calculated if omitted).
+groups:
+  # This section ("Proxmox Server") has two groups, so both will render with
+  # labeled borders and a shared section background.
+  - id: vms
+    label: "Virtual Machines"
+    section: virtualization
+    columns: 3
+    defaults:
+      icon: vm
+      hardware: "KVM Virtual Machine"
+      vlan: servers
+      badges: [ansible, monitored]
+    devices:
+      - id: vm-docker
+        label: "Docker Host"
+        os: "Debian 12"
+        ip: "10.0.10.20"
+        badges: [ansible, docker, monitored]
+        services: ["Portainer", "Grafana", "Prometheus", "Uptime Kuma"]
+      - id: vm-dev
+        label: "Dev Server"
+        os: "Ubuntu 24.04"
+        ip: "10.0.10.21"
+      - id: vm-hass
+        label: "Home Assistant"
+        os: "HAOS 12"
+        ip: "10.0.10.22"
+        badges: [ansible, web, monitored]
+      - id: vm-media
+        label: "Media Server"
+        os: "Debian 12"
+        ip: "10.0.10.23"
+        badges: [ansible, docker, web, monitored]
+
+  - id: containers
+    label: "LXC Containers"
+    section: virtualization
+    columns: 3
+    defaults:
+      icon: container
+      hardware: "LXC Container"
+      os: "Debian 12"
+      vlan: servers
+      badges: [ansible, monitored]
+    devices:
+      - id: ct-wiki
+        label: "Wiki"
+        ip: "10.0.10.30"
+        badges: [ansible, web, monitored]
+      - id: ct-git
+        label: "Gitea"
+        ip: "10.0.10.31"
+        badges: [ansible, web, monitored]
+      - id: ct-passwords
+        label: "Vaultwarden"
+        ip: "10.0.10.32"
+        badges: [ansible, web, monitored]
+      - id: ct-rss
+        label: "FreshRSS"
+        ip: "10.0.10.33"
+        badges: [ansible, web, monitored]
+      - id: ct-dns2
+        label: "Pi-hole (Backup)"
+        ip: "10.0.10.34"
+      - id: ct-monitor
+        label: "Monitoring"
+        ip: "10.0.10.35"
+
+# --- Style (optional) ---
+# All style fields are optional and have sensible defaults.
+# Uncomment and adjust to customize the look of your diagram.
+#
+# style:
+#   background: "#ffffff"
+#   font_family: "Inter, sans-serif"
+#   card_width: 220
+#   card_padding: 8
+#   group_padding: 10
+#   group_spacing: 15

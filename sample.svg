@@ -1,0 +1,483 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1771" height="1529" viewBox="0 0 1771 1529">
+<style>
+  text { font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #333; }
+  .title { font-size: 20px; font-weight: 700; text-anchor: middle; fill: #1a1a2e; }
+  .group-label { font-size: 13px; font-weight: 600; fill: #495057; }
+  .card-label { font-size: 12px; font-weight: 600; fill: #212529; }
+  .card-detail { font-size: 10px; fill: #6c757d; }
+  .card-ip { font-size: 10px; fill: #495057; font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace; }
+  .legend-title { font-size: 12px; font-weight: 700; fill: #333; }
+  .legend-text { font-size: 10px; fill: #555; }
+  .service-text { font-size: 9px; fill: #6c757d; }
+  .section-label { font-size: 13px; font-weight: 700; fill: #868e96; letter-spacing: 0.5px; }
+  .badge-letter { font-size: 11px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+</style>
+<defs>
+  <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%">
+    <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+  </filter>
+</defs>
+<rect width="1771" height="1529" fill="#ffffff"/>
+<text x="886" y="30" class="title">Sample Homelab Diagram</text>
+<text x="10" y="50" class="legend-title">VLANs</text>
+<circle cx="16" cy="66" r="5" fill="#2196F3"/><text x="28" y="70" class="legend-text">VLAN 1 - Management - 192.168.1.0/24</text>
+<circle cx="16" cy="82" r="5" fill="#4CAF50"/><text x="28" y="86" class="legend-text">VLAN 10 - Servers - 10.0.10.0/24</text>
+<circle cx="16" cy="98" r="5" fill="#FF9800"/><text x="28" y="102" class="legend-text">VLAN 20 - IoT - 10.0.20.0/24</text>
+<circle cx="16" cy="114" r="5" fill="#9C27B0"/><text x="28" y="118" class="legend-text">VLAN 30 - Trusted - 10.0.30.0/24</text>
+<text x="10" y="148" class="legend-title">Badges</text>
+<circle cx="17" cy="164" r="7" fill="#2196F3"/><text x="17" y="168" class="badge-letter">A</text><text x="30" y="168" class="legend-text">Managed by Ansible</text>
+<circle cx="17" cy="180" r="7" fill="#4CAF50"/><text x="17" y="184" class="badge-letter">D</text><text x="30" y="184" class="legend-text">Runs Docker</text>
+<circle cx="17" cy="196" r="7" fill="#FF9800"/><text x="17" y="200" class="badge-letter">M</text><text x="30" y="200" class="legend-text">Monitored</text>
+<circle cx="17" cy="212" r="7" fill="#9C27B0"/><text x="17" y="216" class="badge-letter">W</text><text x="30" y="216" class="legend-text">Web-Facing</text>
+<rect x="290.0" y="50.0" width="758.0" height="215.0" rx="16" fill="#f2f7fd" stroke="#cdd3da" stroke-width="1"/>
+<text x="314.0" y="74.0" class="section-label">Cloud Services</text>
+<rect x="290.0" y="280.0" width="1260.0" height="145.0" rx="16" fill="#f3faf5" stroke="#cdd3da" stroke-width="1"/>
+<text x="314.0" y="304.0" class="section-label">Network Core</text>
+<rect x="290.0" y="440.0" width="1009.0" height="157.0" rx="16" fill="#fef9f1" stroke="#cdd3da" stroke-width="1"/>
+<text x="314.0" y="464.0" class="section-label">Infrastructure</text>
+<rect x="290.0" y="612.0" width="1471.0" height="456.0" rx="16" fill="#f8f4fb" stroke="#cdd3da" stroke-width="1"/>
+<text x="314.0" y="636.0" class="section-label">Proxmox Server</text>
+<rect x="290.0" y="1083.0" width="1260.0" height="261.0" rx="16" fill="#fdf2f2" stroke="#cdd3da" stroke-width="1"/>
+<text x="314.0" y="1107.0" class="section-label">Client Devices</text>
+<rect x="290.0" y="1359.0" width="758.0" height="145.0" rx="16" fill="#fdf0f6" stroke="#cdd3da" stroke-width="1"/>
+<text x="314.0" y="1383.0" class="section-label">IoT Devices</text>
+<rect x="308.0" y="92.0" width="220.0" height="139.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="308.0" y="96.0" width="4" height="131.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(320.0,98.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</g>
+<text x="356.0" y="112.0" class="card-label">Web Server</text>
+<text x="356.0" y="128.0" class="card-detail">VPS - 2 vCPU, 4GB RAM</text>
+<text x="356.0" y="140.0" class="card-detail">Debian 12</text>
+<text x="356.0" y="152.0" class="card-detail">Nginx, Certbot</text>
+<text x="324.0" y="172.0" class="service-text">• Ghost</text>
+<text x="324.0" y="188.0" class="service-text">• Static Sites</text>
+<text x="324.0" y="204.0" class="service-text">• API Gateway</text>
+<text x="324.0" y="223.0" class="card-ip">web.example.com</text><circle cx="513.0" cy="218.0" r="7" fill="#9C27B0"/><text x="513.0" y="222.0" class="badge-letter">W</text>
+<circle cx="497.0" cy="218.0" r="7" fill="#FF9800"/><text x="497.0" y="222.0" class="badge-letter">M</text>
+<circle cx="481.0" cy="218.0" r="7" fill="#2196F3"/><text x="481.0" y="222.0" class="badge-letter">A</text>
+<rect x="559.0" y="92.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="559.0" y="96.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(571.0,98.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</g>
+<text x="607.0" y="112.0" class="card-label">Mail Server</text>
+<text x="607.0" y="128.0" class="card-detail">VPS - 1 vCPU, 2GB RAM</text>
+<text x="607.0" y="140.0" class="card-detail">Debian 12</text>
+<text x="575.0" y="169.0" class="card-ip">mail.example.com</text><circle cx="764.0" cy="164.0" r="7" fill="#FF9800"/><text x="764.0" y="168.0" class="badge-letter">M</text>
+<circle cx="748.0" cy="164.0" r="7" fill="#2196F3"/><text x="748.0" y="168.0" class="badge-letter">A</text>
+<rect x="810.0" y="92.0" width="220.0" height="97.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="810.0" y="96.0" width="4" height="89.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(822.0,98.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</g>
+<text x="858.0" y="112.0" class="card-label">Cloud Backup</text>
+<text x="858.0" y="128.0" class="card-detail">Encrypted offsite backup</text>
+<text x="858.0" y="140.0" class="card-detail">target</text>
+<circle cx="1015.0" cy="176.0" r="7" fill="#FF9800"/><text x="1015.0" y="180.0" class="badge-letter">M</text>
+<rect x="308.0" y="322.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<g transform="translate(318.0,328.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2 20h.01" />
+  <path d="M7 20v-4" />
+  <path d="M12 20v-8" />
+  <path d="M17 20V8" />
+  <path d="M22 4v16" />
+</g>
+<text x="354.0" y="342.0" class="card-label">Cable Modem</text>
+<text x="354.0" y="358.0" class="card-detail">Motorola MB8600</text>
+<text x="322.0" y="399.0" class="card-ip">192.168.100.1</text><rect x="559.0" y="322.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="559.0" y="326.0" width="4" height="77.0" rx="2" fill="#2196F3"/>
+<g transform="translate(571.0,328.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="20" height="8" x="2" y="14" rx="2" />
+  <path d="M6.01 18H6" />
+  <path d="M10.01 18H10" />
+  <path d="M15 10v4" />
+  <path d="M17.84 7.17a4 4 0 0 0-5.66 0" />
+  <path d="M20.66 4.34a8 8 0 0 0-11.31 0" />
+</g>
+<text x="607.0" y="342.0" class="card-label">Router / Firewall</text>
+<text x="607.0" y="358.0" class="card-detail">pfSense on Protectli</text>
+<text x="607.0" y="370.0" class="card-detail">pfSense CE 2.7</text>
+<text x="575.0" y="399.0" class="card-ip">192.168.1.1</text><rect x="810.0" y="322.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="810.0" y="326.0" width="4" height="77.0" rx="2" fill="#2196F3"/>
+<g transform="translate(822.0,328.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" />
+</g>
+<text x="858.0" y="342.0" class="card-label">Managed Switch</text>
+<text x="858.0" y="358.0" class="card-detail">24-Port PoE+ Gigabit</text>
+<text x="826.0" y="399.0" class="card-ip">192.168.1.2</text><rect x="1061.0" y="322.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1061.0" y="326.0" width="4" height="77.0" rx="2" fill="#2196F3"/>
+<g transform="translate(1073.0,328.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20h.01" />
+  <path d="M2 8.82a15 15 0 0 1 20 0" />
+  <path d="M5 12.859a10 10 0 0 1 14 0" />
+  <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+</g>
+<text x="1109.0" y="342.0" class="card-label">WiFi Access Point</text>
+<text x="1109.0" y="358.0" class="card-detail">Main Floor</text>
+<text x="1077.0" y="399.0" class="card-ip">192.168.1.3</text><rect x="1312.0" y="322.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1312.0" y="326.0" width="4" height="77.0" rx="2" fill="#2196F3"/>
+<g transform="translate(1324.0,328.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20h.01" />
+  <path d="M2 8.82a15 15 0 0 1 20 0" />
+  <path d="M5 12.859a10 10 0 0 1 14 0" />
+  <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+</g>
+<text x="1360.0" y="342.0" class="card-label">WiFi Access Point</text>
+<text x="1360.0" y="358.0" class="card-detail">Upstairs</text>
+<text x="1328.0" y="399.0" class="card-ip">192.168.1.4</text><rect x="308.0" y="482.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="308.0" y="486.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(320.0,488.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10 16h.01" />
+  <path d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+  <path d="M21.946 12.013H2.054" />
+  <path d="M6 16h.01" />
+</g>
+<text x="356.0" y="502.0" class="card-label">NAS</text>
+<text x="356.0" y="518.0" class="card-detail">Synology DS920+</text>
+<text x="356.0" y="530.0" class="card-detail">16TB usable (RAID), Ethernet</text>
+<text x="324.0" y="559.0" class="card-ip">10.0.10.5</text><circle cx="513.0" cy="554.0" r="7" fill="#FF9800"/><text x="513.0" y="558.0" class="badge-letter">M</text>
+<rect x="559.0" y="482.0" width="220.0" height="97.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="559.0" y="486.0" width="4" height="89.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(571.0,488.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20v2" />
+  <path d="M12 2v2" />
+  <path d="M17 20v2" />
+  <path d="M17 2v2" />
+  <path d="M2 12h2" />
+  <path d="M2 17h2" />
+  <path d="M2 7h2" />
+  <path d="M20 12h2" />
+  <path d="M20 17h2" />
+  <path d="M20 7h2" />
+  <path d="M7 20v2" />
+  <path d="M7 2v2" />
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <rect x="8" y="8" width="8" height="8" rx="1" />
+</g>
+<text x="607.0" y="502.0" class="card-label">Pi-hole (Ad Blocking &amp;</text>
+<text x="607.0" y="516.0" class="card-label">DNS)</text>
+<text x="607.0" y="532.0" class="card-detail">Raspberry Pi 4 (4GB)</text>
+<text x="607.0" y="544.0" class="card-detail">Raspberry Pi OS</text>
+<text x="607.0" y="556.0" class="card-detail">Ethernet</text>
+<text x="575.0" y="571.0" class="card-ip">10.0.10.2</text><circle cx="764.0" cy="566.0" r="7" fill="#FF9800"/><text x="764.0" y="570.0" class="badge-letter">M</text>
+<circle cx="748.0" cy="566.0" r="7" fill="#2196F3"/><text x="748.0" y="570.0" class="badge-letter">A</text>
+<rect x="810.0" y="482.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="810.0" y="486.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(822.0,488.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20v2" />
+  <path d="M12 2v2" />
+  <path d="M17 20v2" />
+  <path d="M17 2v2" />
+  <path d="M2 12h2" />
+  <path d="M2 17h2" />
+  <path d="M2 7h2" />
+  <path d="M20 12h2" />
+  <path d="M20 17h2" />
+  <path d="M20 7h2" />
+  <path d="M7 20v2" />
+  <path d="M7 2v2" />
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <rect x="8" y="8" width="8" height="8" rx="1" />
+</g>
+<text x="858.0" y="502.0" class="card-label">WireGuard VPN</text>
+<text x="858.0" y="518.0" class="card-detail">Raspberry Pi 4 (2GB)</text>
+<text x="858.0" y="530.0" class="card-detail">Raspberry Pi OS</text>
+<text x="858.0" y="542.0" class="card-detail">Ethernet</text>
+<text x="826.0" y="559.0" class="card-ip">10.0.10.3</text><circle cx="1015.0" cy="554.0" r="7" fill="#FF9800"/><text x="1015.0" y="558.0" class="badge-letter">M</text>
+<circle cx="999.0" cy="554.0" r="7" fill="#2196F3"/><text x="999.0" y="558.0" class="badge-letter">A</text>
+<rect x="1061.0" y="482.0" width="220.0" height="97.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1061.0" y="486.0" width="4" height="89.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(1073.0,488.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+  <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+  <line x1="6" x2="6.01" y1="6" y2="6" />
+  <line x1="6" x2="6.01" y1="18" y2="18" />
+</g>
+<text x="1109.0" y="502.0" class="card-label">Proxmox Server</text>
+<text x="1109.0" y="518.0" class="card-detail">Dell PowerEdge T340</text>
+<text x="1109.0" y="530.0" class="card-detail">Xeon E-2224, 64GB ECC,</text>
+<text x="1109.0" y="542.0" class="card-detail">Ethernet</text>
+<text x="1077.0" y="571.0" class="card-ip">10.0.10.10</text><rect x="308.0" y="655.0" width="710.0" height="395.0" rx="12" fill="#f8f4fb" stroke="#d0d5db" stroke-width="1.5"/>
+<text x="320.0" y="678.0" class="group-label">Virtual Machines</text>
+<rect x="318.0" y="695.0" width="220.0" height="157.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="318.0" y="699.0" width="4" height="149.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(330.0,701.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v4" />
+  <path d="M22 12.307V15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8.693" />
+  <path d="M8 21h8" />
+  <circle cx="19" cy="6" r="3" />
+</g>
+<text x="366.0" y="715.0" class="card-label">Docker Host</text>
+<text x="366.0" y="731.0" class="card-detail">KVM Virtual Machine</text>
+<text x="366.0" y="743.0" class="card-detail">Debian 12</text>
+<text x="334.0" y="763.0" class="service-text">• Portainer</text>
+<text x="334.0" y="779.0" class="service-text">• Grafana</text>
+<text x="334.0" y="795.0" class="service-text">• Prometheus</text>
+<text x="334.0" y="811.0" class="service-text">• Uptime Kuma</text>
+<text x="334.0" y="844.0" class="card-ip">10.0.10.20</text><circle cx="523.0" cy="839.0" r="7" fill="#FF9800"/><text x="523.0" y="843.0" class="badge-letter">M</text>
+<circle cx="507.0" cy="839.0" r="7" fill="#4CAF50"/><text x="507.0" y="843.0" class="badge-letter">D</text>
+<circle cx="491.0" cy="839.0" r="7" fill="#2196F3"/><text x="491.0" y="843.0" class="badge-letter">A</text>
+<rect x="553.0" y="695.0" width="220.0" height="157.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="553.0" y="699.0" width="4" height="149.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(565.0,701.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v4" />
+  <path d="M22 12.307V15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8.693" />
+  <path d="M8 21h8" />
+  <circle cx="19" cy="6" r="3" />
+</g>
+<text x="601.0" y="715.0" class="card-label">Dev Server</text>
+<text x="601.0" y="731.0" class="card-detail">KVM Virtual Machine</text>
+<text x="601.0" y="743.0" class="card-detail">Ubuntu 24.04</text>
+<text x="569.0" y="844.0" class="card-ip">10.0.10.21</text><circle cx="758.0" cy="839.0" r="7" fill="#FF9800"/><text x="758.0" y="843.0" class="badge-letter">M</text>
+<circle cx="742.0" cy="839.0" r="7" fill="#2196F3"/><text x="742.0" y="843.0" class="badge-letter">A</text>
+<rect x="788.0" y="695.0" width="220.0" height="157.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="788.0" y="699.0" width="4" height="149.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(800.0,701.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v4" />
+  <path d="M22 12.307V15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8.693" />
+  <path d="M8 21h8" />
+  <circle cx="19" cy="6" r="3" />
+</g>
+<text x="836.0" y="715.0" class="card-label">Home Assistant</text>
+<text x="836.0" y="731.0" class="card-detail">KVM Virtual Machine</text>
+<text x="836.0" y="743.0" class="card-detail">HAOS 12</text>
+<text x="804.0" y="844.0" class="card-ip">10.0.10.22</text><circle cx="993.0" cy="839.0" r="7" fill="#9C27B0"/><text x="993.0" y="843.0" class="badge-letter">W</text>
+<circle cx="977.0" cy="839.0" r="7" fill="#FF9800"/><text x="977.0" y="843.0" class="badge-letter">M</text>
+<circle cx="961.0" cy="839.0" r="7" fill="#2196F3"/><text x="961.0" y="843.0" class="badge-letter">A</text>
+<rect x="318.0" y="883.0" width="220.0" height="157.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="318.0" y="887.0" width="4" height="149.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(330.0,889.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v4" />
+  <path d="M22 12.307V15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8.693" />
+  <path d="M8 21h8" />
+  <circle cx="19" cy="6" r="3" />
+</g>
+<text x="366.0" y="903.0" class="card-label">Media Server</text>
+<text x="366.0" y="919.0" class="card-detail">KVM Virtual Machine</text>
+<text x="366.0" y="931.0" class="card-detail">Debian 12</text>
+<text x="334.0" y="1032.0" class="card-ip">10.0.10.23</text><circle cx="523.0" cy="1027.0" r="7" fill="#9C27B0"/><text x="523.0" y="1031.0" class="badge-letter">W</text>
+<circle cx="507.0" cy="1027.0" r="7" fill="#FF9800"/><text x="507.0" y="1031.0" class="badge-letter">M</text>
+<circle cx="491.0" cy="1027.0" r="7" fill="#4CAF50"/><text x="491.0" y="1031.0" class="badge-letter">D</text>
+<circle cx="475.0" cy="1027.0" r="7" fill="#2196F3"/><text x="475.0" y="1031.0" class="badge-letter">A</text>
+<rect x="1033.0" y="655.0" width="710.0" height="251.0" rx="12" fill="#f8f4fb" stroke="#d0d5db" stroke-width="1.5"/>
+<text x="1045.0" y="678.0" class="group-label">LXC Containers</text>
+<rect x="1043.0" y="695.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1043.0" y="699.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(1055.0,701.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" />
+  <path d="M10 21.9V14L2.1 9.1" />
+  <path d="m10 14 11.9-6.9" />
+  <path d="M14 19.8v-8.1" />
+  <path d="M18 17.5V9.4" />
+</g>
+<text x="1091.0" y="715.0" class="card-label">Wiki</text>
+<text x="1091.0" y="731.0" class="card-detail">LXC Container</text>
+<text x="1091.0" y="743.0" class="card-detail">Debian 12</text>
+<text x="1059.0" y="772.0" class="card-ip">10.0.10.30</text><circle cx="1248.0" cy="767.0" r="7" fill="#9C27B0"/><text x="1248.0" y="771.0" class="badge-letter">W</text>
+<circle cx="1232.0" cy="767.0" r="7" fill="#FF9800"/><text x="1232.0" y="771.0" class="badge-letter">M</text>
+<circle cx="1216.0" cy="767.0" r="7" fill="#2196F3"/><text x="1216.0" y="771.0" class="badge-letter">A</text>
+<rect x="1278.0" y="695.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1278.0" y="699.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(1290.0,701.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" />
+  <path d="M10 21.9V14L2.1 9.1" />
+  <path d="m10 14 11.9-6.9" />
+  <path d="M14 19.8v-8.1" />
+  <path d="M18 17.5V9.4" />
+</g>
+<text x="1326.0" y="715.0" class="card-label">Gitea</text>
+<text x="1326.0" y="731.0" class="card-detail">LXC Container</text>
+<text x="1326.0" y="743.0" class="card-detail">Debian 12</text>
+<text x="1294.0" y="772.0" class="card-ip">10.0.10.31</text><circle cx="1483.0" cy="767.0" r="7" fill="#9C27B0"/><text x="1483.0" y="771.0" class="badge-letter">W</text>
+<circle cx="1467.0" cy="767.0" r="7" fill="#FF9800"/><text x="1467.0" y="771.0" class="badge-letter">M</text>
+<circle cx="1451.0" cy="767.0" r="7" fill="#2196F3"/><text x="1451.0" y="771.0" class="badge-letter">A</text>
+<rect x="1513.0" y="695.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1513.0" y="699.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(1525.0,701.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" />
+  <path d="M10 21.9V14L2.1 9.1" />
+  <path d="m10 14 11.9-6.9" />
+  <path d="M14 19.8v-8.1" />
+  <path d="M18 17.5V9.4" />
+</g>
+<text x="1561.0" y="715.0" class="card-label">Vaultwarden</text>
+<text x="1561.0" y="731.0" class="card-detail">LXC Container</text>
+<text x="1561.0" y="743.0" class="card-detail">Debian 12</text>
+<text x="1529.0" y="772.0" class="card-ip">10.0.10.32</text><circle cx="1718.0" cy="767.0" r="7" fill="#9C27B0"/><text x="1718.0" y="771.0" class="badge-letter">W</text>
+<circle cx="1702.0" cy="767.0" r="7" fill="#FF9800"/><text x="1702.0" y="771.0" class="badge-letter">M</text>
+<circle cx="1686.0" cy="767.0" r="7" fill="#2196F3"/><text x="1686.0" y="771.0" class="badge-letter">A</text>
+<rect x="1043.0" y="811.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1043.0" y="815.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(1055.0,817.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" />
+  <path d="M10 21.9V14L2.1 9.1" />
+  <path d="m10 14 11.9-6.9" />
+  <path d="M14 19.8v-8.1" />
+  <path d="M18 17.5V9.4" />
+</g>
+<text x="1091.0" y="831.0" class="card-label">FreshRSS</text>
+<text x="1091.0" y="847.0" class="card-detail">LXC Container</text>
+<text x="1091.0" y="859.0" class="card-detail">Debian 12</text>
+<text x="1059.0" y="888.0" class="card-ip">10.0.10.33</text><circle cx="1248.0" cy="883.0" r="7" fill="#9C27B0"/><text x="1248.0" y="887.0" class="badge-letter">W</text>
+<circle cx="1232.0" cy="883.0" r="7" fill="#FF9800"/><text x="1232.0" y="887.0" class="badge-letter">M</text>
+<circle cx="1216.0" cy="883.0" r="7" fill="#2196F3"/><text x="1216.0" y="887.0" class="badge-letter">A</text>
+<rect x="1278.0" y="811.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1278.0" y="815.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(1290.0,817.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" />
+  <path d="M10 21.9V14L2.1 9.1" />
+  <path d="m10 14 11.9-6.9" />
+  <path d="M14 19.8v-8.1" />
+  <path d="M18 17.5V9.4" />
+</g>
+<text x="1326.0" y="831.0" class="card-label">Pi-hole (Backup)</text>
+<text x="1326.0" y="847.0" class="card-detail">LXC Container</text>
+<text x="1326.0" y="859.0" class="card-detail">Debian 12</text>
+<text x="1294.0" y="888.0" class="card-ip">10.0.10.34</text><circle cx="1483.0" cy="883.0" r="7" fill="#FF9800"/><text x="1483.0" y="887.0" class="badge-letter">M</text>
+<circle cx="1467.0" cy="883.0" r="7" fill="#2196F3"/><text x="1467.0" y="887.0" class="badge-letter">A</text>
+<rect x="1513.0" y="811.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1513.0" y="815.0" width="4" height="77.0" rx="2" fill="#4CAF50"/>
+<g transform="translate(1525.0,817.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" />
+  <path d="M10 21.9V14L2.1 9.1" />
+  <path d="m10 14 11.9-6.9" />
+  <path d="M14 19.8v-8.1" />
+  <path d="M18 17.5V9.4" />
+</g>
+<text x="1561.0" y="831.0" class="card-label">Monitoring</text>
+<text x="1561.0" y="847.0" class="card-detail">LXC Container</text>
+<text x="1561.0" y="859.0" class="card-detail">Debian 12</text>
+<text x="1529.0" y="888.0" class="card-ip">10.0.10.35</text><circle cx="1718.0" cy="883.0" r="7" fill="#FF9800"/><text x="1718.0" y="887.0" class="badge-letter">M</text>
+<circle cx="1702.0" cy="883.0" r="7" fill="#2196F3"/><text x="1702.0" y="887.0" class="badge-letter">A</text>
+<rect x="308.0" y="1125.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="308.0" y="1129.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(320.0,1131.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="20" height="14" x="2" y="3" rx="2" />
+  <line x1="8" x2="16" y1="21" y2="21" />
+  <line x1="12" x2="12" y1="17" y2="21" />
+</g>
+<text x="356.0" y="1145.0" class="card-label">Desktop PC</text>
+<text x="356.0" y="1161.0" class="card-detail">Custom Build</text>
+<text x="356.0" y="1173.0" class="card-detail">Linux</text>
+<text x="356.0" y="1185.0" class="card-detail">Ethernet</text>
+<text x="324.0" y="1202.0" class="card-ip">10.0.30.10</text><circle cx="513.0" cy="1197.0" r="7" fill="#2196F3"/><text x="513.0" y="1201.0" class="badge-letter">A</text>
+<rect x="559.0" y="1125.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="559.0" y="1129.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(571.0,1131.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" />
+  <path d="M20.054 15.987H3.946" />
+</g>
+<text x="607.0" y="1145.0" class="card-label">Personal Laptop</text>
+<text x="607.0" y="1161.0" class="card-detail">WiFi</text>
+<text x="575.0" y="1202.0" class="card-ip">10.0.30.12</text><rect x="810.0" y="1125.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="810.0" y="1129.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(822.0,1131.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
+  <line x1="12" x2="12.01" y1="18" y2="18" />
+</g>
+<text x="858.0" y="1145.0" class="card-label">iPad</text>
+<text x="858.0" y="1161.0" class="card-detail">WiFi</text>
+<text x="826.0" y="1202.0" class="card-ip">10.0.30.20</text><rect x="1061.0" y="1125.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1061.0" y="1129.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(1073.0,1131.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+  <path d="M12 18h.01" />
+</g>
+<text x="1109.0" y="1145.0" class="card-label">Phone</text>
+<text x="1109.0" y="1161.0" class="card-detail">WiFi</text>
+<text x="1077.0" y="1202.0" class="card-ip">10.0.30.21</text><rect x="1312.0" y="1125.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1312.0" y="1129.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(1324.0,1131.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m17 2-5 5-5-5" />
+  <rect width="20" height="15" x="2" y="7" rx="2" />
+</g>
+<text x="1360.0" y="1145.0" class="card-label">Living Room TV</text>
+<text x="1360.0" y="1161.0" class="card-detail">55&#34; 4K</text>
+<text x="1360.0" y="1173.0" class="card-detail">Ethernet</text>
+<text x="1328.0" y="1202.0" class="card-ip">10.0.30.30</text><rect x="308.0" y="1241.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="308.0" y="1245.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(320.0,1247.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m17 2-5 5-5-5" />
+  <rect width="20" height="15" x="2" y="7" rx="2" />
+</g>
+<text x="356.0" y="1261.0" class="card-label">Bedroom TV</text>
+<text x="356.0" y="1277.0" class="card-detail">WiFi</text>
+<text x="324.0" y="1318.0" class="card-ip">10.0.30.31</text><rect x="559.0" y="1241.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="559.0" y="1245.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(571.0,1247.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 10v2.2l1.6 1" />
+  <path d="m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05" />
+  <path d="m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05" />
+  <circle cx="12" cy="12" r="6" />
+</g>
+<text x="607.0" y="1261.0" class="card-label">Smartwatch</text>
+<text x="607.0" y="1277.0" class="card-detail">WiFi</text>
+<text x="575.0" y="1318.0" class="card-ip">10.0.30.40</text><rect x="810.0" y="1241.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="810.0" y="1245.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(822.0,1247.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" />
+</g>
+<text x="858.0" y="1261.0" class="card-label">Kindle</text>
+<text x="858.0" y="1277.0" class="card-detail">WiFi</text>
+<text x="826.0" y="1318.0" class="card-ip">10.0.30.41</text><rect x="1061.0" y="1241.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1061.0" y="1245.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(1073.0,1247.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+  <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" />
+  <rect x="6" y="14" width="12" height="8" rx="1" />
+</g>
+<text x="1109.0" y="1261.0" class="card-label">Laser Printer</text>
+<text x="1109.0" y="1277.0" class="card-detail">WiFi</text>
+<text x="1077.0" y="1318.0" class="card-ip">10.0.30.50</text><rect x="1312.0" y="1241.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="1312.0" y="1245.0" width="4" height="77.0" rx="2" fill="#9C27B0"/>
+<g transform="translate(1324.0,1247.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="6" x2="10" y1="12" y2="12" />
+  <line x1="8" x2="8" y1="10" y2="14" />
+  <line x1="15" x2="15.01" y1="13" y2="13" />
+  <line x1="18" x2="18.01" y1="11" y2="11" />
+  <rect width="20" height="12" x="2" y="6" rx="2" />
+</g>
+<text x="1360.0" y="1261.0" class="card-label">Game Console</text>
+<text x="1360.0" y="1277.0" class="card-detail">Ethernet</text>
+<text x="1328.0" y="1318.0" class="card-ip">10.0.30.60</text><rect x="308.0" y="1401.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="308.0" y="1405.0" width="4" height="77.0" rx="2" fill="#FF9800"/>
+<g transform="translate(320.0,1407.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="12" r="3" />
+  <path d="M12 5v2" />
+  <path d="M12 17v2" />
+  <path d="M5 12h2" />
+  <path d="M17 12h2" />
+</g>
+<text x="356.0" y="1421.0" class="card-label">Robot Vacuum</text>
+<text x="356.0" y="1437.0" class="card-detail">WiFi</text>
+<text x="324.0" y="1478.0" class="card-ip">10.0.20.10</text><rect x="559.0" y="1401.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="559.0" y="1405.0" width="4" height="77.0" rx="2" fill="#FF9800"/>
+<g transform="translate(571.0,1407.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3v18" />
+  <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
+  <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M7 21h10" />
+</g>
+<text x="607.0" y="1421.0" class="card-label">Smart Scale</text>
+<text x="607.0" y="1437.0" class="card-detail">WiFi</text>
+<text x="575.0" y="1478.0" class="card-ip">10.0.20.11</text><rect x="810.0" y="1401.0" width="220.0" height="85.0" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1" filter="url(#card-shadow)"/>
+<rect x="810.0" y="1405.0" width="4" height="77.0" rx="2" fill="#FF9800"/>
+<g transform="translate(822.0,1407.0) scale(1.250)" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M11 9h4a2 2 0 0 0 2-2V3" />
+  <circle cx="9" cy="9" r="2" />
+  <path d="M7 21v-4a2 2 0 0 1 2-2h4" />
+  <circle cx="15" cy="15" r="2" />
+</g>
+<text x="858.0" y="1421.0" class="card-label">Smart Switches &amp; Bulbs</text>
+<text x="858.0" y="1437.0" class="card-detail">~15 devices</text>
+<text x="858.0" y="1449.0" class="card-detail">WiFi</text>
+</svg>
