@@ -12,15 +12,15 @@ import (
 )
 
 const (
-	iconSize     = 40
-	badgeIconSz  = 16
-	fontSize     = 12
-	titleFontSz  = 20
-	labelFontSz  = 14
-	smallFontSz  = 10
-	cardRadius   = 8
-	groupRadius  = 12
-	vlanStripeW  = 4
+	iconSize    = 40
+	badgeIconSz = 16
+	fontSize    = 12
+	titleFontSz = 20
+	labelFontSz = 14
+	smallFontSz = 10
+	cardRadius  = 8
+	groupRadius = 12
+	vlanStripeW = 4
 )
 
 func SVG(scene *layout.Scene) string {
@@ -292,7 +292,6 @@ func stripSVGWrapper(svg string) string {
 	}
 	return svg[start+1 : end]
 }
-
 
 func esc(s string) string {
 	return html.EscapeString(s)

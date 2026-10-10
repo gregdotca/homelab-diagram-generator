@@ -33,3 +33,8 @@
   and search engines have text to match.
 - Updated the header comment in `sample.yaml` to use the new name
   and the `hdg` binary.
+- Ran `gofmt` on `internal/config/config.go`,
+  `internal/icons/icons.go`, `internal/layout/layout.go`, and
+  `internal/render/svg.go`. The struct and constant columns were
+  over-padded and there were stray blank lines, so `gofmt -l` flagged
+  all four files. Spacing only; the code behaves the same.

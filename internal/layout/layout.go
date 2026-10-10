@@ -8,35 +8,35 @@ import (
 )
 
 type Scene struct {
-	Width       float64
-	Height      float64
-	Title       string
-	FontFamily  string
-	Background  string
-	Sections    []PositionedSection
-	Groups      []PositionedGroup
-	Legend      LegendBlock
+	Width      float64
+	Height     float64
+	Title      string
+	FontFamily string
+	Background string
+	Sections   []PositionedSection
+	Groups     []PositionedGroup
+	Legend     LegendBlock
 }
 
 type PositionedSection struct {
-	Label          string
-	X, Y, W, H    float64
-	Background     string
+	Label      string
+	X, Y, W, H float64
+	Background string
 }
 
 type PositionedGroup struct {
 	config.Group
-	X, Y, W, H      float64
-	Cards            []PositionedCard
-	HideLabel        bool
+	X, Y, W, H        float64
+	Cards             []PositionedCard
+	HideLabel         bool
 	SectionBackground string
 }
 
 type PositionedCard struct {
 	config.Device
 	X, Y, W, H float64
-	VLANColor   string
-	GroupID     string
+	VLANColor  string
+	GroupID    string
 }
 
 type LegendBlock struct {
@@ -47,13 +47,13 @@ type LegendBlock struct {
 }
 
 const (
-	titleHeight     = 40
-	legendWidth     = 280
-	legendItemH     = 20
-	cardHeight      = 85
-	serviceRowH     = 18
-	badgeSize       = 18
-	minGroupWidth   = 260
+	titleHeight   = 40
+	legendWidth   = 280
+	legendItemH   = 20
+	cardHeight    = 85
+	serviceRowH   = 18
+	badgeSize     = 18
+	minGroupWidth = 260
 )
 
 func Compute(cfg *config.Config) *Scene {
@@ -262,8 +262,8 @@ func Compute(cfg *config.Config) *Scene {
 
 			for _, gm := range rm.groups {
 				pg := PositionedGroup{
-					Group:             gm.group,
-					X: currentX, Y: contentY,
+					Group: gm.group,
+					X:     currentX, Y: contentY,
 					W: gm.w, H: gm.h,
 					HideLabel:         !multiGroup,
 					SectionBackground: sectionBg,
@@ -297,8 +297,8 @@ func Compute(cfg *config.Config) *Scene {
 					}
 
 					pg.Cards = append(pg.Cards, PositionedCard{
-						Device:    dev,
-						X: cx, Y: cy,
+						Device: dev,
+						X:      cx, Y: cy,
 						W: cardW, H: cardH,
 						VLANColor: vlanColor,
 						GroupID:   gm.group.ID,
@@ -363,7 +363,6 @@ func Compute(cfg *config.Config) *Scene {
 
 	return s
 }
-
 
 func bestColumns(deviceCount int, cardW, maxWidth float64) int {
 	if deviceCount <= 2 {
@@ -453,5 +452,3 @@ func cardHeightFor(dev config.Device) float64 {
 	}
 	return float64(h)
 }
-
-

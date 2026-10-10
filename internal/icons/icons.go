@@ -10,8 +10,8 @@ import (
 var builtinFS embed.FS
 
 var (
-	cache   map[string]string
-	loadMu  sync.Once
+	cache  map[string]string
+	loadMu sync.Once
 )
 
 func loadAll() {

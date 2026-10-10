@@ -9,15 +9,15 @@ import (
 )
 
 type Config struct {
-	Title       string           `yaml:"title"`
-	VLANs       []VLAN           `yaml:"vlans"`
-	BadgeList   []Badge          `yaml:"badges"`
-	Badges      map[string]Badge `yaml:"-"`
-	Sections    []Section        `yaml:"sections"`
-	SectionMap  map[int]Section  `yaml:"-"`
-	Devices     []Device         `yaml:"devices"`
-	Groups      []Group          `yaml:"groups"`
-	Style       *DiagramStyle    `yaml:"style"`
+	Title      string           `yaml:"title"`
+	VLANs      []VLAN           `yaml:"vlans"`
+	BadgeList  []Badge          `yaml:"badges"`
+	Badges     map[string]Badge `yaml:"-"`
+	Sections   []Section        `yaml:"sections"`
+	SectionMap map[int]Section  `yaml:"-"`
+	Devices    []Device         `yaml:"devices"`
+	Groups     []Group          `yaml:"groups"`
+	Style      *DiagramStyle    `yaml:"style"`
 }
 
 type Section struct {
