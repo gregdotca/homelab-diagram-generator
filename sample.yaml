@@ -1,8 +1,8 @@
 # ============================================================================
 # Sample Homelab Diagram
 # ============================================================================
-# This file demonstrates every feature of the homelab diagram builder.
-# Run: homelab -input sample.yaml -output sample.svg
+# This file demonstrates every feature of the homelab diagram generator.
+# Run: hdg -input sample.yaml -output sample.svg
 
 title: "Sample Homelab Diagram"
 

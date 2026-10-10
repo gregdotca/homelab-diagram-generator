@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gregdotca/hdg/internal/config"
-	"github.com/gregdotca/hdg/internal/layout"
-	"github.com/gregdotca/hdg/internal/render"
+	"github.com/gregdotca/homelab-diagram-generator/internal/config"
+	"github.com/gregdotca/homelab-diagram-generator/internal/layout"
+	"github.com/gregdotca/homelab-diagram-generator/internal/render"
 )
 
 func main() {

@@ -4,7 +4,7 @@ import (
 	"math"
 	"sort"
 
-	"github.com/gregdotca/hdg/internal/config"
+	"github.com/gregdotca/homelab-diagram-generator/internal/config"
 )
 
 type Scene struct {

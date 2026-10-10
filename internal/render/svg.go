@@ -6,9 +6,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/gregdotca/hdg/internal/config"
-	"github.com/gregdotca/hdg/internal/icons"
-	"github.com/gregdotca/hdg/internal/layout"
+	"github.com/gregdotca/homelab-diagram-generator/internal/config"
+	"github.com/gregdotca/homelab-diagram-generator/internal/icons"
+	"github.com/gregdotca/homelab-diagram-generator/internal/layout"
 )
 
 const (

@@ -1,4 +1,4 @@
-module github.com/gregdotca/hdg
+module github.com/gregdotca/homelab-diagram-generator
 
 go 1.21
 
