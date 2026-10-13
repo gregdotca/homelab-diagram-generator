@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-12
+
+### Added
+
+- Added `.github/dependabot.yml` so Dependabot checks the Go modules
+  in `go.mod` once a month and opens one grouped pull request when
+  updates are out. New releases wait 7 days before they're proposed,
+  so a broken release has time to be pulled first. Security updates
+  aren't held back by that wait.
+
 ## 2026-10-09
 
 ### Added
