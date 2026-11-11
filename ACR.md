@@ -6,7 +6,7 @@ updated: 2026-10-09
 
 # AI Code Rating
 
-**ACR B4c** (Maintainer: Experienced · AI Share: 76–100% · Oversight: Spot-Checked)
+**[ACR B4c](https://aicoderating.com/B4c/)** (Maintainer: Experienced · AI Share: 76–100% · Oversight: Spot-Checked)
 
 This project is rated with [AI Code Rating](https://aicoderating.com/spec/0.1/), spec version 0.1.
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-11
+
+### Changed
+
+- Linked the rating in `ACR.md` to its page on aicoderating.com.
+
 ## 2026-10-12
 
 ### Added
